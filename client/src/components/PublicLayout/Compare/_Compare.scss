@@ -1,0 +1,53 @@
+.compare {
+  @include container();
+  display: flex;
+  flex-direction: column;
+  min-height: 20rem;
+  justify-content: center;
+  overflow-x: scroll;
+
+  table {
+    @include table-config();
+    overflow-y: scroll;
+    td {
+      position: relative;
+    }
+    img {
+      max-width: 150px;
+      display: block;
+      margin: auto;
+    }
+    tfoot {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+.compare-link {
+  color: $main-color;
+  font-weight: 500;
+  &:hover {
+    color: lighten($main-color, 10%);
+  }
+}
+.no-comparison-msg {
+  align-self: center;
+  color: $secondary-color;
+}
+.delete-compare-item {
+  @include reset-btn();
+  color: $sale-color;
+  cursor: pointer;
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  opacity: 0.4;
+  &:hover {
+    opacity: 1;
+  }
+}
+.clear-compare-btn {
+  @include secondary-btn();
+  width: fit-content;
+  margin: auto;
+}

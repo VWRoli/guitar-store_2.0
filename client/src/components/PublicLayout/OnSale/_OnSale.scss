@@ -1,0 +1,23 @@
+.onsale-wrapper {
+  @include container();
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.onsale-title {
+  @include container();
+  @include top-bottom-border();
+  color: $main-color;
+}
+@media screen and (max-width: 970px) {
+  .onsale-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 700px) {
+  .onsale-title {
+    font-size: 1.5rem;
+  }
+  .onsale-wrapper {
+    grid-template-columns: 1fr;
+  }
+} ;
