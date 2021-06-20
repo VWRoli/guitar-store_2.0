@@ -46,12 +46,22 @@ const Navbar = () => {
           })}
         </ul>
         <div className="nav-controls">
-          <Link to="/compare" className="navbar-icons navbar-cart">
+          <Link
+            to="/compare"
+            className="navbar-icons navbar-cart"
+            onClick={() => {
+              setShowMobileNav(false);
+            }}>
             <FaBalanceScale />
             <span className="cart-item-total">0</span>
           </Link>
 
-          <Link to="/cart" className="navbar-icons navbar-cart">
+          <Link
+            to="/cart"
+            className="navbar-icons navbar-cart"
+            onClick={() => {
+              setShowMobileNav(false);
+            }}>
             <FaShoppingCart />
             <span className="cart-item-total">0</span>
           </Link>

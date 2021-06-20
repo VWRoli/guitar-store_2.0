@@ -3,6 +3,7 @@ import Home from './Home/Home';
 //Components
 import Navbar from './Navbar/Navbar';
 import Banner from './Banner/Banner';
+import Footer from './Footer/Footer';
 
 const PublicLayout = (): JSX.Element => {
   return (
@@ -12,6 +13,7 @@ const PublicLayout = (): JSX.Element => {
       <Switch>
         <Route exact path="/" render={() => <Home />} />
       </Switch>
+      <Footer />
     </>
   );
 };
