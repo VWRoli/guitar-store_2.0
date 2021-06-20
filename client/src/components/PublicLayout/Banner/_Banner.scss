@@ -1,0 +1,23 @@
+#sale-banner {
+  background-color: $main-color;
+  color: $light-bg;
+  padding: 0.5rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  a {
+    color: $light-bg;
+    text-decoration: underline;
+  }
+  #admin-btn {
+    @include primary-btn();
+    background-color: $light-bg;
+    color: $main-color;
+    margin: 0;
+    &:hover {
+      background-color: darken($light-bg, 5%);
+      color: darken($main-color, 5%);
+    }
+  }
+}
